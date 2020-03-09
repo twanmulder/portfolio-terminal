@@ -27,7 +27,7 @@ const execute = function executeCommand(input) {
   }
 
   // "Secret" party command
-  if (input == "party") {
+  if (input === "party") {
     startTheParty();
   }
 
