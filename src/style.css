@@ -110,7 +110,7 @@ a:hover {
 .terminal-window {
   min-height: 254px;
   max-height: 60vh;
-  padding: 0.5rem 0rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
 }
