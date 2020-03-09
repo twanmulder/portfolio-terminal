@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&nbsp;Twan | Terminal Test</title>
+    <meta name="description" content="My secret terminal portfolio. You shouldn't be reading this." />
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.17/dist/index.min.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-flex">
+              <div class="column-child terminal shadow">
+                <div class="terminal-bar dark-mode">
+                  <div class="icon-btn close"></div>
+                  <div class="icon-btn min"></div>
+                  <div class="icon-btn max"></div>
+                  <div class="terminal-bar-text is-hidden-mobile dark-mode-text">guest@twan: ~</div>
+                </div>
+                <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
+                  <div class="terminal-output" id="terminalOutput">
+                    <div class="terminal-line">
+                      <span class="help-msg">Welcome to my portfolio! — Type <span class="code">help</span> for a list of supported commands.</span>
+                    </div>
+                  </div>
+                  <div class="terminal-line">
+                    <span class="success">➜</span> <span class="directory">~</span> <span class="user-input" id="userInput"></span>
+                    <input type="text" id="dummyKeyboard" class="dummy-keyboard" autocomplete="off" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>Made with 💙 by Twan Mulder.</p>
+        </div>
+      </footer>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
