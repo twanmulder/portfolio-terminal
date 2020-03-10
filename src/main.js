@@ -8,7 +8,8 @@ const COMMANDS = {
   contact:
     'You can contact me on any of the following links:<br>["<a target="_blank" rel="noopener noreferrer" href="https://github.com/twanmulder" class="social link">GitHub</a>", "<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@toktoktwan" class="social link">Medium</a>", "<a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/toktoktwan/" class="social link">Twitter</a>"]',
   bob: "<span style='font-size: 2rem;'>🐕</span>",
-  party: "🎉🎉🎉"
+  party: "🎉🎉🎉",
+  beer: '["<a target="_blank" rel="noopener noreferrer" href="https://anytimers.netlify.com" class="social link">Anytimers!</a>"]'
 };
 let userInput, terminalOutput;
 
