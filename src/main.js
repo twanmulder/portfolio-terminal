@@ -9,7 +9,8 @@ const COMMANDS = {
     'You can contact me on any of the following links:<br>["<a target="_blank" rel="noopener noreferrer" href="https://github.com/twanmulder" class="social link">GitHub</a>", "<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@toktoktwan" class="social link">Medium</a>", "<a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/toktoktwan/" class="social link">Twitter</a>"]',
   bob: "<span style='font-size: 2rem;'>🐕</span>",
   party: "🎉🎉🎉",
-  beer: '["<a target="_blank" rel="noopener noreferrer" href="https://anytimers.netlify.com" class="social link">Anytimers!</a>"]'
+  beer: '["<a target="_blank" rel="noopener noreferrer" href="https://anytimers.netlify.com" class="social link">Anytimers!</a>"]',
+  "sudo rm -rf": ""
 };
 let userInput, terminalOutput;
 
@@ -30,6 +31,11 @@ const execute = function executeCommand(input) {
   // "Secret" party command
   if (input === "party") {
     startTheParty();
+  }
+
+  // "Secret" party command
+  if (input === "sudo rm -rf") {
+    whooops();
   }
 
   output = `<div class="terminal-line"><span class="success">➜</span> <span class="directory">~</span> ${input}</div>`;
@@ -90,4 +96,11 @@ const startTheParty = () => {
   };
   var confetti = new ConfettiGenerator(confettiSettings);
   confetti.render();
+};
+
+const whooops = () => {
+  document.body.querySelector(".hero").remove();
+  document.body.style.background = "#000";
+  document.body.style.width = "100vw";
+  document.body.style.height = "100vh";
 };
